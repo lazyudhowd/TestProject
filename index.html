@@ -5,18 +5,14 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 		<meta name="description" content="" />
 		<meta name="author" content="" />
-		<title>Halaman Penghitung Uang</title>
+		<title>Percobaan</title>
 	</head>
 	<body>
 		<div id="allBody">
 			<h1 id="title">
-				<a href="https://sites.google.com/view/lazismukotasingkawang/kalkulator-celengan">PENGHITUNG UANG</a>
+				<a href="https://lazyudhowd.github.io/TestProject/">Mengambil Data dari Google SpreadSheets</a>
 			</h1>
-
-			<div id="main">
-
-			</div>
-		<div id="footer">Copyright © 2023 <a href="https://lazismu-singkawang.business.site">Lazismu Kota Singkawang</a></div>
+		<div id="footer">Copyright © 2024 <a href="https://lazismu-singkawang.business.site">Lazismu Kota Singkawang</a></div>
 
 		<script type="text/javascript">
 			// https://docs.google.com/spreadsheets/d/1Ilqf1q_f4UCprFt65EG-L-FovrO55u---x2-23w8Zhk/edit?usp=sharing
@@ -24,8 +20,11 @@
 
 			fetch(dataSpreadSheet)
 			.then(res => res.text())
-			.then(data => {
-				console.log(data);
+			.then(retrieve => {
+				console.log(retrieve);
+				let parseData = retrieve.substr(47).slice(0,-2);
+				console.log(" === after parsed ===");
+				console.log(parseData);
 			})
 
 		</script>
