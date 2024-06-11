@@ -21,10 +21,22 @@
 			fetch(dataSpreadSheet)
 			.then(res => res.text())
 			.then(retrieve => {
+				// menampilkan data dari spreadsheet, sheet pertama
 				console.log(retrieve);
+
+				// memodifikasi data yang diambil dari spreadsheet menghilangkan bagian "google.visualization.Query.setResponse"
+				// serta beberapa tanda kurung
 				let parseData = retrieve.substr(47).slice(0,-2);
 				console.log(" === after parsed ===");
+
+				// menampilkan data yang telah di parsing
 				console.log(parseData);
+
+				// membuat objek json
+				let jsonObject = JSON.parse(parseData);
+
+				// menampilkan objek json
+				console.log(jsonObject)
 			})
 
 		</script>
