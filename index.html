@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<meta name="description" content="" />
+		<meta name="author" content="" />
+		<title>Halaman Penghitung Uang</title>
+	</head>
+	<body>
+		<div id="allBody">
+			<h1 id="title">
+				<a href="https://sites.google.com/view/lazismukotasingkawang/kalkulator-celengan">PENGHITUNG UANG</a>
+			</h1>
+
+			<div id="main">
+
+			</div>
+		<div id="footer">Copyright © 2023 <a href="https://lazismu-singkawang.business.site">Lazismu Kota Singkawang</a></div>
+
+		<script type="text/javascript">
+			// https://docs.google.com/spreadsheets/d/1Ilqf1q_f4UCprFt65EG-L-FovrO55u---x2-23w8Zhk/edit?usp=sharing
+			let dataSpreadSheet = "https://docs.google.com/spreadsheets/d/1Ilqf1q_f4UCprFt65EG-L-FovrO55u---x2-23w8Zhk/gviz/tq?";
+
+			fetch(dataSpreadSheet)
+			.then(res => res.text())
+			.then(data => {
+				console.log(data);
+			})
+
+		</script>
+	</body>
+</html>
